@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1{
+            color: gray;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello My Name is JS</h1>
+
+    <section id="topSection">
+        <article class="blog">
+            <h1 id="head-1">this our headline - &</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta id aliquid, eos in earum eaque amet ipsa dolor laborum nemo rem beatae eius, nobis iure sed qui? Repellat, voluptate.</p>
+        </article>
+        <article class="blog">
+            <h1 class="head-2">i'm the second one</h1>
+            <p>Nobis tempora nam ratione sunt tenetur excepturi quam, deleniti accusamus eaque accusantium, voluptatibus cupiditate, a sed magni recusandae ea dolorum vero! Ipsam eaque repellat rem iste maxime velit aliquam architecto.</p>
+        </article>
+        <article id="thrid-blog" class="blog">
+            <h1 id="head-3">i'm the third one</h1>
+            <p>Minus iste, officia fugit, aliquid, libero ipsa incidunt nostrum cupiditate ex harum facere! Debitis vitae ea magni iure sed aspernatur est similique ipsam quo quam blanditiis fugit alias, dolore sit!</p>
+        </article>
+        <article class="blog">
+            <h1 class="head-4">this our headline - &</h1>
+            <p>Modi, odit eos labore commodi tenetur dolore qui porro! Delectus tempora impedit, hic aspernatur minus harum quaerat ipsam nulla. Quasi nostrum molestiae asperiores voluptatum fuga doloremque delectus ratione ipsum dicta?</p>
+        </article>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        let name = [12, 214, 124, 2425, 14,];
+        // console.log(name)
+    </script>
+    <script>
+        // console.log('this is our mod')
+
+
+        // to get a element or tag we can use the code document.GetElementById/className/TagName('the name');
+        const blogElement = document.getElementsByTagName('h1');
+        for(const blog of blogElement){
+            // console.log(blog);
+        }
+        const articleBlog = document.getElementsByTagName('article');
+        for(const articled of articleBlog){
+            // console.log(articled)
+        }
+
+
+
+
+
+
+
+
+
+    // we can also do style by using javascript get element by id
+
+        const secondHeading = document.getElementById('head-3');
+        secondHeading.style.color = 'red';
+        secondHeading.style.textAlign = 'center';
+        secondHeading.style.padding = '20px';
+        secondHeading.style.backgroundColor = 'yellogreen'
+        secondHeading.innerText = 'now i change it using by js'
+
+
+
+
+
+    // get elements by class names and multi class  styling
+
+    
+    // console.log(allBlogs)
+
+    const topSection = document.getElementById('topSection');
+    const article = document.createElement('article');
+    article.classList.add('blog')
+    const h1 = document.createElement('h1');
+    const p = document.createElement('p');
+    h1.innerText = 'this is our new headline';
+    p.innerText = 'Modi, odit eos labore commodi tenetur dolore qui porro! Delectus tempora impedit, hic aspernatur minus harum quaerat ipsam nulla.';
+    article.appendChild(h1);
+    article.appendChild(p);
+    topSection.appendChild(article);
+
+
+
+
+    const allBlogs = document.getElementsByClassName('blog');
+    for(const blogArt of allBlogs){
+        // console.log(blogArt);
+        blogArt.style.padding = '50px';
+        blogArt.style.border = '3px solid green';
+        blogArt.style.borderRadius = '10px';
+        blogArt.style.margin = '30px'
+    };
+
+    
+
+
+
+    
+    const allElements = document.getElementById('topSection');
+    // console.log(allElements.children)
+    const second = allElements.children[1];
+    // console.log(second);
+    // allElements.removeChild(second)
+
+
+
+    </script>
+</body>
+</html>

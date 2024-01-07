@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <h3 id="remove">this our headline</h3>
+    <input type="text" id="confirm-delete" placeholder="Please type delete ">
+    <button id="delete-btn" disabled>Delete</button>
+
+
+
+    <script>
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            document.getElementById('remove').style.display = 'none'
+        })
+        document.getElementById('confirm-delete').addEventListener('keyup', function(event){
+           if(event.target.value == 'delete'){
+            document.getElementById('delete-btn').removeAttribute('disabled');
+           }
+           else{
+            document.getElementById('delete-btn').setAttribute('disabled', true);
+           }
+        })
+
+
+
+
+        // focus
+        document.getElementById('confirm-delete').addEventListener('focus', function(){
+            document.body.style.backgroundColor = 'yellowgreen';
+        })
+
+        // blur
+        document.getElementById('confirm-delete').addEventListener('blur', function(){
+            document.body.style.backgroundColor = 'white';
+        })
+
+        //keydown
+        // document.getElementById('confirm-delete').addEventListener('keydown', function(){
+        //     const deletField = document.getElementById('confirm-delete');
+        //     console.log(deletField.value);
+        // })
+
+
+        //keypress
+        // document.getElementById('confirm-delete').addEventListener('keypress', function(){
+        //     const deletField = document.getElementById('confirm-delete');
+        //     console.log(deletField.value);
+        // })
+
+        //keyup
+        // document.getElementById('confirm-delete').addEventListener('keyup', function(){
+        //     const deletField = document.getElementById('confirm-delete');
+        //     console.log(deletField.value);
+        // })
+
+        //change
+        // document.getElementById('confirm-delete').addEventListener('change', function(){
+        //     const deletField = document.getElementById('confirm-delete');
+        //     console.log(deletField.value);
+        // })
+
+
+
+    </script>
+</body>
+</html>

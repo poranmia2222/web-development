@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div id="comment-section">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, aperiam.</p>
+                <p>At iusto repellat dicta facere ipsa natus quis pariatur quibusdam.</p>
+                <p>Ad eos eveniet eum repellendus rem doloremque illo qui consectetur!</p>
+            </div>
+            <div id="post-comment">
+                <textarea name="" id="comment" cols="60" rows="6"></textarea><br>
+                <button id="comment-post-btn">Post</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+        // add button event hendler
+        document.getElementById('comment-post-btn').addEventListener('click', function(){
+            // get user comment
+            const comment = document.getElementById('comment');
+            // create comment paragraph
+            const newComment = document.createElement('p');
+            newComment.innerText = comment.value;
+            // append the comment
+            const commentSection = document.getElementById('comment-section');
+            commentSection.appendChild( newComment)
+            comment.value = '';
+        })
+    </script>
+</body>
+</html>

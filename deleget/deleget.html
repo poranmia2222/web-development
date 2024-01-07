@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>delegation</title>
+</head>
+<body>
+   <section>
+       <div id="container">
+           <h3>this our heading</h3>
+           <ul id="list-item">
+               <li class="item">Lorem, ipsum dolor.</li>
+               <li class="item">Sit, eum cupiditate?</li>
+               <li class="item">Ullam, dicta ducimus.</li>
+               <li class="item">Autem, enim pariatur?</li>
+               <li class="item">Unde, necessitatibus magnam.</li>
+               <li class="item">Harum, laboriosam quis!</li>
+           </ul>
+           <button id="add-element">add</button>
+       </div>
+   </section>
+   <script>
+       
+   //    document.getElementById('add-element').addEventListener('click', function(){
+   //     const li = document.createElement('li');
+   //     li.classList.add('item')
+   //     const parent = document.getElementById('list-item');
+   //     li.innerText = 'new update'
+   //     parent.appendChild(li)
+   //    })
+
+
+       document.getElementById('list-item').addEventListener('click', function(event){
+           // document.getElementById('list-item').removeChild(item)
+           event.target.parentNode.removeChild(event.target)
+       })
+
+
+
+
+
+
+
+
+       
+   </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name"><br>
+    <input type="text" id="gmail"><br>
+    <p id="confirm"></p>
+    <p id="confirm2"></p>
+    <p id="name-fild"></p>
+    <button onclick=login()>Sign In</button>
+    <button id="log-out">Sign Out</button>
+    <button id="send">Send</button>
+
+
+
+    <script>
+
+        //using function
+        // function login(){
+        //     const p = document.getElementById('confirm');
+        //     p.innerText = 'login is loading'
+        // }
+        // direct function
+        document.getElementById('log-out').addEventListener('click', function(){
+            const p2 = document.getElementById('confirm2');
+            p2.innerText = 'log-out confirm';
+        });
+
+         document.getElementById('send').addEventListener('click', function(){
+            const getGmail = document.getElementById('name');
+
+            const p = document.getElementById('name-fild');
+            p.innerText = getGmail.value;
+
+            // console.log(getGmail.value);
+
+
+         })
+    </script>
+</body>
+</html>

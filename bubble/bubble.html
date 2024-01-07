@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="main-container">
+        <h4>this bubble text</h4>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li id="second-click" class="item">Dolorem, ipsam voluptatibus.</li>
+            <li class="item">Consequuntur, laudantium labore.</li>
+            <li class="item">Quia, non laboriosam.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('second-click').addEventListener('click', function(event){
+            console.log('second item click')
+            
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('second-click').addEventListener('click', function(){
+            console.log('second item click')
+        })
+        document.getElementById('second-click').addEventListener('click', function(){
+            console.log('second item click')
+        })
+        document.getElementById('second-click').addEventListener('click', function(){
+            console.log('second item click')
+        })
+        document.getElementById('second-click').addEventListener('click', function(){
+            console.log('second item click')
+        })
+
+        document.getElementById('list-container').addEventListener('click', function(){
+            console.log('item click')
+        })
+
+        document.getElementById('main-container').addEventListener('click', function(){
+            console.log('container click')
+        })
+    </script>
+</body>
+</html>
